@@ -1,0 +1,117 @@
+/* Base Styles */
+.title-cards {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+
+.title-cards h2 {
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.card-list {
+  display: flex;
+  gap: 16px; /* Space between cards */
+  overflow-x: auto; /* Allows horizontal scrolling if necessary */
+  padding-bottom: 8px; /* Padding to prevent scrollbar overlap */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  flex-wrap: nowrap; /* Prevents cards from wrapping */
+}
+
+.card-list::-webkit-scrollbar {
+  display: none; /* Hide default scrollbar */
+}
+
+.card-list .card {
+  position: relative;
+  flex-shrink: 0; /* Ensures cards don’t shrink */
+}
+
+.card-list img {
+  width: 240px; /* Default card width */
+  border-radius: 8px; /* Modern look with rounded corners */
+  cursor: pointer; /* Pointer cursor for interactive elements */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-list img:hover {
+  transform: scale(1.05); /* Zoom effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Shadow for emphasis */
+}
+
+.card-list .card p {
+  position: absolute;
+  bottom: 10px;
+  left: 10px; /* Position text for better readability */
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for text */
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+  .title-cards h2 {
+      font-size: 22px; /* Adjust font size for medium screens */
+  }
+
+  .card-list {
+      gap: 12px; /* Reduce gap between cards */
+  }
+
+  .card-list img {
+      width: 200px; /* Adjust card width for medium screens */
+  }
+
+  .card-list .card p {
+      font-size: 14px; /* Adjust font size for text */
+      padding: 3px 6px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title-cards h2 {
+      font-size: 20px; /* Further reduce font size */
+  }
+
+  .card-list {
+      gap: 8px; /* Further reduce gap between cards */
+  }
+
+  .card-list img {
+      width: 160px; /* Adjust card width for small screens */
+  }
+
+  .card-list .card p {
+      font-size: 12px; /* Further reduce font size */
+      padding: 2px 4px; /* Adjust padding */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title-cards {
+      padding: 0 10px; /* Reduce padding on very small screens */
+  }
+
+  .title-cards h2 {
+      font-size: 18px; /* Further reduce font size */
+  }
+
+  .card-list {
+      gap: 6px; /* Minimal gap between cards */
+  }
+
+  .card-list img {
+      width: 140px; /* Adjust card width for very small screens */
+  }
+
+  .card-list .card p {
+      font-size: 10px; /* Further reduce font size */
+      padding: 2px 4px; /* Adjust padding */
+  }
+}
